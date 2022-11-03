@@ -11,6 +11,7 @@ a:-webkit-any-link {
 
 body{
   background-color: #F5F5F5;
+  font-size: 0.9em;
 }
 
 nav{
@@ -31,15 +32,15 @@ nav{
 
 .logo span{
   font-family: 'Poppins', sans-serif !important;
-  font-size: 1.5em;
+  font-size: 1.8em;
   letter-spacing: -1px;
   font-weight: 700;
 }
 
 .logo img{
-  height: 0.7em;
+  height: 0.75em;
   margin-bottom: -1px;
-  margin-right: -4px;
+  margin-right: -3px;
   margin-left: -3px;
 }
 .pages{
@@ -50,6 +51,7 @@ nav{
 
 .page-name{
   height: 100%;
+  /* font-size: 0.9em; */
   color: #656565;
   display: flex;
   text-transform: uppercase;
@@ -78,7 +80,7 @@ nav{
 }
 
 .profile img{
-  height: 1.5em;
+  height: 2em;
   border-radius: 100px;
 }
 
@@ -99,6 +101,7 @@ nav{
   background: #FFFFFF;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding-bottom: 0;
 }
 
 .tool-info{
@@ -190,6 +193,7 @@ nav{
 .menu select{
   letter-spacing: 0.5px;
   font-weight: 500;
+  font-size: 1.1em;
   color: rgba(0, 0, 0, 0.87);
   margin-left: 30px;
   border: none;
@@ -208,7 +212,7 @@ nav{
   padding: 8px;
   padding-right: 9px;
   border-radius: 3px;
-  margin-right: 10px;
+  margin-right: 20px;
   border: 1px solid rgba(0, 0, 0, 0.2)
 }
 
@@ -224,8 +228,9 @@ nav{
   text-transform: uppercase;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  padding: 6px 12px;
+  padding: 8px 12px;
   height: 40px;
+  font-weight: 500;
   padding-right: 0;
   margin-right: 20px;
 }
@@ -237,7 +242,7 @@ nav{
 
 .dots-image{
   padding: 0 12px;
-  height: 16px;
+  height: 20px;
 }
 
 .dates{
@@ -262,9 +267,10 @@ nav{
 }
 
 .dates-shortcuts span{
+  /* font-size: 0.9em; */
   background-color: rgba(0, 0, 0, 0.08);
   color: rgba(0, 0, 0, 0.6);
-  padding: 10px 12px;
+  padding: 6px 10px;
   margin-right: 10px;
   border-radius: 100px;
 }
@@ -274,16 +280,24 @@ nav{
 }
 
 .usage-panel{
+  /* font-size: 0.9em; */
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
   padding: 20px;
+  padding-bottom: 15px;
 }
+
+.usage-panel *{
+  letter-spacing: 0.25px;
+}
+
 .usage-head{
   display: flex;
   flex-direction: row;
   width: 100%;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.28);
+  color: rgba(0, 0, 0, 0.38);
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08)
 }
@@ -294,15 +308,16 @@ nav{
   flex-direction: row;
   width: 100%;
   height: 100px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08)
 }
 
 .date{
-  width: 21%;
+  width: 15%;
   color: rgba(0, 0, 0, 0.38);
 }
 
 .type{
-  width: 13%;
+  width: 14%;
 }
 
 .usage-item .type{
@@ -314,11 +329,11 @@ nav{
 }
 
 .usage{
-  width: 40%;
+  width: 42%;
 }
 
 .result{
-  width: 13%;
+  width: 15%;
 }
 
 .usage-item .result{
@@ -328,18 +343,17 @@ nav{
 }
 
 .usage-item .result span{
-  letter-spacing: 0.25px;
   color: rgba(0, 0, 0, 0.6);
   display: -webkit-box;
-  height: 100px;
-  max-width: 90%;
+  height: 90px;
+  max-width: 85%;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .result img{
-  height: 12px;
+  height: 13px;
   padding-right: 15px;
 }
 
