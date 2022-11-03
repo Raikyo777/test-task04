@@ -9,15 +9,17 @@ const getTools = async () => {
         data.results.map(result => {
           $('.tools').append( `
               <div class="tool">
-                <img class="tool-image" src="${result.pic}" alt="">
-                <p class="title">${result.title}</p>
-                <div class="state-block">
-                  <select name="tool-select" id="tool-select">
-                    <option value="available" ${result.isTaken? "selected": ""} >Свободен</option>
-                    <option value="taken" ${result.isTaken? "": "selected"}>Занят</option>
-                  </select>
-                  <img class="bell-image" src="pics/bell-${result.notifType}.png">
-                </div>
+                  <a class="tool-link" href="analytics.html?id=${result.id}">
+                    <img class="tool-image" src="${result.pic}" alt="">
+                    <p class="title">${result.title}</p>
+                  </a>
+                  <div class="state-block">
+                    <select name="tool-select" id="tool-select">
+                      <option value="available" ${result.isTaken? "selected": ""} >Свободен</option>
+                      <option value="taken" ${result.isTaken? "": "selected"}>Занят</option>
+                    </select>
+                    <img class="bell-image" src="pics/bell-${result.notifType}.png">
+                  </div>
               </div>
             `);
         })

@@ -16,13 +16,23 @@ app.get("/test", (req, res) => {
 })
 
 app.post("/tools/create", async (req, res) => {
-  console.log(req.query)
-  const results = await db.createTool(req.query);
-  res.status(201).json({ id: results[0] })
+  console.log(req)
+  // const results = await db.createTool(req.query);
+  // res.status(201).json({ id: results[0] })
 })
 
 app.get("/tools/get", async (req, res) => {
   const results = await db.getTools();
+  res.status(201).json({ 'results': results })
+})
+
+app.get("/tools/get/:id", async (req, res) => {
+  const results = await db.getTool(req.params.id);
+  res.status(201).json({ 'results': results })
+})
+
+app.get("/usage/get/:id", async (req, res) => {
+  const results = await db.getUsage(req.params.id);
   res.status(201).json({ 'results': results })
 })
 
