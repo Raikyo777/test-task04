@@ -1,5 +1,5 @@
 const getTool = async (id) => {
-  fetch(`http://127.0.0.1:3001/tools/get/${id}`,
+  fetch(`https://biotech-task.herokuapp.com/tools/get/${id}`,
         {
             method: "GET",
         }
@@ -8,7 +8,7 @@ const getTool = async (id) => {
         result = data.results[0]
 
         $('.tool-info').append( `
-              <img class="tool-image" src="../${result.pic}" alt="">
+              <img class="tool-image" src="${result.pic}" alt="">
               <div class="info-panel">
                 <div class="info-main">
                   <p class="title">${result.title}</p>
@@ -17,12 +17,12 @@ const getTool = async (id) => {
                       <option value="available" ${result.isTaken? "selected": ""} >Свободен</option>
                       <option value="taken" ${result.isTaken? "": "selected"}>В работе</option>
                     </select>
-                    <img class="fav-image" src="../pics/heart-red.png">
-                    <img class="fav-image" src="../pics/gear.png">
+                    <img class="fav-image" src="pics/heart-red.png">
+                    <img class="fav-image" src="pics/gear.png">
                   </div>
                 </div>
                 <div class="id-container">
-                  <span>${result.code}</span><img src="../pics/circle.png"></img ><span>${result.serial_number}</span>
+                  <span>${result.code}</span><img src="pics/circle.png"></img ><span>${result.serial_number}</span>
                 </div>
               </div>
         `)
@@ -42,7 +42,7 @@ const getLi = (usages) => {
 }
 
 const getUsage = async (id) => {
-  fetch(`http://127.0.0.1:3001/usage/get/${id}`,
+  fetch(`https://biotech-task.herokuapp.com/usage/get/${id}`,
         {
             method: "GET",
         }
@@ -67,7 +67,7 @@ const getUsage = async (id) => {
               </div>
               <div class="result">
                 <span>${result.result}</span>
-                <img src="../pics/mark.png" />
+                <img src="pics/mark.png" />
               </div>
               <div class="username">
                 <span>${result.username}</span>

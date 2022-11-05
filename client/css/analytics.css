@@ -260,9 +260,10 @@
 .usage-item .result span{
   color: rgba(0, 0, 0, 0.6);
   display: -webkit-box;
-  height: 90px;
+  height: 72px;
   max-width: 85%;
-  -webkit-line-clamp: 5;
+  padding-right: 15px;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

@@ -1,5 +1,5 @@
 const getTools = async () => {
-  fetch('http://127.0.0.1:3001/tools/get',
+  fetch('https://biotech-task.herokuapp.com/tools/get',
         {
             method: "GET",
         }
@@ -10,7 +10,7 @@ const getTools = async () => {
           $('.tools').append( `
               <div class="tool">
                   <a class="tool-link" href="analytics.html?id=${result.id}">
-                    <img class="tool-image" src="../${result.pic}" alt="">
+                    <img class="tool-image" src="${result.pic}" alt="">
                     <p class="title">${result.title}</p>
                   </a>
                   <div class="state-block">
@@ -18,7 +18,7 @@ const getTools = async () => {
                       <option value="available" ${result.isTaken? "selected": ""} >Свободен</option>
                       <option value="taken" ${result.isTaken? "": "selected"}>Занят</option>
                     </select>
-                    <img class="bell-image" src="../pics/bell-${result.notifType}.png">
+                    <img class="bell-image" src="pics/bell-${result.notifType}.png">
                   </div>
               </div>
             `);

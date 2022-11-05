@@ -36,4 +36,4 @@ app.get("/usage/get/:id", async (req, res) => {
   res.status(201).json({ 'results': results })
 })
 
-app.listen(3001, () => console.log("server is running on port 3001"))
+app.listen(process.env.PORT || 3001, () => console.log("server is running on port"))
