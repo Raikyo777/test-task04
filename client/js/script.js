@@ -1,5 +1,5 @@
 const getTools = async () => {
-  fetch('https://biotech-task.herokuapp.com/tools/get',
+  fetch('http://127.0.0.1:3001/tools/get',
         {
             method: "GET",
         }

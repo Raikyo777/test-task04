@@ -1,5 +1,5 @@
 const getTool = async (id) => {
-  fetch(`https://biotech-task.herokuapp.com/tools/get/${id}`,
+  fetch(`http://127.0.0.1:3001/tools/get/${id}`,
         {
             method: "GET",
         }
@@ -42,7 +42,7 @@ const getLi = (usages) => {
 }
 
 const getUsage = async (id) => {
-  fetch(`https://biotech-task.herokuapp.com/usage/get/${id}`,
+  fetch(`http://127.0.0.1:3001/usage/get/${id}`,
         {
             method: "GET",
         }
